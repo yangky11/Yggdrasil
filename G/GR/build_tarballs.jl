@@ -64,7 +64,7 @@ platforms = [
     Platform("i686",  "linux"; libc="glibc"),
     Platform("powerpc64le",  "linux"; libc="glibc"),
     Platform("x86_64",  "windows"),
-    Platform("i686",  "windows"),    
+    Platform("i686",  "windows"),
     Platform("x86_64",  "macos"),
 #    Platform("x86_64",  "freebsd"),
 ]
@@ -91,7 +91,7 @@ dependencies = [
     Dependency("Libtiff_jll"),
     Dependency("Pixman_jll"),
 #    Dependency("Qhull_jll"),
-    Dependency("Qt5Base_jll"),    
+    Dependency("Qt5Base_jll"),
     BuildDependency("Xorg_libX11_jll"),
     BuildDependency("Xorg_xproto_jll"),
     Dependency("Zlib_jll"),
@@ -100,4 +100,4 @@ dependencies = [
 # Build the tarballs, and possibly a `build.jl` as well.
 # GCC version 7 because of ffmpeg, but building against Qt requires v8 on Windows.
 build_tarballs(ARGS, name, version, sources, script, platforms, products, dependencies;
-               preferred_gcc_version = v"8")
+               preferred_gcc_version = v"8", experimental=true)
