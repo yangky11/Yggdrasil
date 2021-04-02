@@ -66,6 +66,7 @@ platforms = [
     Platform("x86_64",  "windows"),
     Platform("i686",  "windows"),
     Platform("x86_64",  "macos"),
+    Platform("aarch64", "macos")
 #    Platform("x86_64",  "freebsd"),
 ]
 platforms = expand_cxxstring_abis(platforms)
